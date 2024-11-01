@@ -19,7 +19,17 @@ fruits={"apple":130,
              "tangerine":50,
              "watermelon":80}
 
-fruit=input("Item: ").lower()
-if fruit in fruits:
-    print("Calories:",fruits[fruit])
-else: None
+def userinput(fruit):
+    if fruit in fruits:
+        return fruits[fruit]
+    else:
+        return None
+
+def main():
+    fruit=input("Item: ").lower()
+    if fruit in fruits:
+        print("Calories:",userinput(fruit))
+    else:
+        print("")
+
+main()
