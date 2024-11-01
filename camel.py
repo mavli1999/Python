@@ -1,11 +1,15 @@
-type=input("camelCase: ")
+def userinput(type):
+    snake_case=""
 
-snake_case=""
+    for camelcase in type:
+        if camelcase.isupper():
+            snake_case += "_" + camelcase.lower()
+        else:
+            snake_case += camelcase
+    return snake_case
 
-for camelcase in type:
-    if camelcase.isupper():
-        snake_case += "_" + camelcase.lower()
-    else:
-        snake_case += camelcase
+def main():
+    type=input("camelCase: ")
+    print("snake_case:", userinput(type))
 
-print("snake_case:", snake_case)
+main()
