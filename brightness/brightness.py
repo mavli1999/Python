@@ -25,7 +25,7 @@ def main():
             }) #add to analysis file
 
             #or use the simplied below:
-            #row["brightness"]=calculate_brightness(f"{row["id"]}.jpeg") - create a new row based on view file
+            #row["brightness"]=calculate_brightness(f"{row["id"]}.jpeg") - create a new column based on view file
             #writer.writerow(row) - then add all columns to writer file 
     
 
