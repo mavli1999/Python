@@ -9,7 +9,7 @@ def user_input():
     else:
         before_file = sys.argv[1]
         after_file = sys.argv[2]
-        return before_file, after_file
+    return before_file, after_file
 
 def main():
     before_file, after_file = user_input()
