@@ -13,7 +13,7 @@ def user_input():
         sys.exit("Not a CSV file")
     else:
         filename = sys.argv[1]
-        return filename
+    return filename
 
 def main():
     table = []
