@@ -4,8 +4,6 @@ class Student:
             raise ValueError("Missing name")
         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
             raise ValueError("Invalid house")
-        if patronus and patronus not in ["Stag", "Otter", "Jack Russell terrier"]:
-            raise ValueError("Invalid patronus")
         self.name = name
         self.house = house
         self.patronus = patronus
@@ -25,18 +23,17 @@ class Student:
                 return "🪄"
 
 
-def main():
-    student = get_student() #student = the class from get_student()
-    print(student) #display the class 
-    #When print(student) is called, Python implicitly calls the __str__ method of the Student class
-    print("Expecto Patronum!", student.charm())
-
-
 def get_student():
     name = input("Name: ")
     house = input("House: ")
     patronus = input("Patronus: ") or None
     return Student(name, house, patronus) #the class is being created and returned
+
+def main():
+    student = get_student() #student = the class from get_student()
+    print(student) #display the class 
+    #When print(student) is called, Python implicitly calls the __str__ method of the Student class
+    print("Expecto Patronum!", student.charm())
 
 
 if __name__ == "__main__":
